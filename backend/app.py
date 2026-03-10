@@ -7,7 +7,7 @@ from routes.attendance import attendance_bp
 import os
 
 app = Flask(__name__)
-CORS(app, resources={r"/api/*": {"origins": "*"}})
+CORS(app, resources={r"/*": {"origins": "*"}}, supports_credentials=True)
 
 # Configuration
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///attendance.db'
